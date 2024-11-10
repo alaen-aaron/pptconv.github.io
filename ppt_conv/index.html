@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic JSON to PPT Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dynamic JSON to PPT Converter</h1>
+    
+    <textarea id="jsonInput" rows="15" cols="60" placeholder="Paste your JSON data here"></textarea><br>
+    
+    <!-- Color selectors -->
+    <label for="textColor">Text Color:</label>
+    <input type="color" id="textColor" value="#FFFF00"><br>
+    
+    <label for="bgColor">Background Color:</label>
+    <input type="color" id="bgColor" value="#000000"><br>
+    
+    <!-- Background image upload -->
+    <label for="bgImage">Background Image:</label>
+    <input type="file" id="bgImage" accept="image/*"><br><br>
+    
+    <button id="convertBtn">Convert JSON to PPT</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.10.0/dist/pptxgen.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

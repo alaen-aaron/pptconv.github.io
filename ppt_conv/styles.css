@@ -1,0 +1,117 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #FF6F61, #FFB6B9); /* Bright Gradient Background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column; /* Ensure content is stacked vertically */
+  overflow-y: auto; /* Allow scrolling */
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+textarea {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  resize: none; /* Disable resizing */
+}
+
+textarea:focus {
+  border-color: #FF6F61;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.6);
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+input[type="color"] {
+  width: 60px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+input[type="color"]:hover {
+  transform: scale(1.2);
+}
+
+input[type="file"] {
+  display: none; /* Hide the default file input button */
+}
+
+label[for="bgImage"] {
+  padding: 12px;
+  background-color: #FF6F61;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+label[for="bgImage"]:hover {
+  background-color: #FFB6B9;
+  transform: scale(1.05);
+}
+
+button {
+  padding: 15px 25px;
+  background-color: #FF6F61;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #FFB6B9;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #FF6F61;
+  transform: scale(1);
+}
+
+pre {
+  background-color: #F4F4F9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+pre:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+

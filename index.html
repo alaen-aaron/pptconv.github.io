@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyrics to JSON Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lyrics to JSON Converter</h1>
+
+    <div id="songsContainer">
+      <!-- Song 1 (Initial song) -->
+      <div class="song" id="song_1">
+        <h2>Song 1</h2>
+        <label for="title_1">Song Title:</label>
+        <input type="text" id="title_1" name="title"><br>
+
+        <label for="musicInfo_1">Music Info:</label>
+        <input type="text" id="musicInfo_1" name="musicInfo"><br>
+
+        <label for="lyrics_1">Lyrics (Raw):</label>
+        <textarea id="lyrics_1" name="lyrics" rows="4"></textarea><br>
+
+        <label for="taen_1">Lyrics (Phonetic):</label>
+        <textarea id="taen_1" name="taen" rows="4"></textarea><br>
+
+        <label for="videoUrl_1">Video URL:</label>
+        <input type="url" id="videoUrl_1" name="videoUrl"><br>
+
+        <label for="songwriter_1">Songwriter:</label>
+        <input type="text" id="songwriter_1" name="songwriter"><br>
+
+        <label for="playlists_1">Playlists (Comma-separated IDs):</label>
+        <input type="text" id="playlists_1" name="playlists"><br>
+      </div>
+    </div>
+
+    <!-- Button to add more songs -->
+    <button type="button" onclick="addSong()">Add More Songs</button>
+
+    <!-- Button to convert all songs to JSON -->
+    <button type="button" onclick="convertToJson()">Convert to JSON</button>
+
+    <h2>Generated JSON</h2>
+    <pre id="jsonOutput"></pre>
+    <!-- Copy JSON Button -->
+<button type="button" onclick="copyJson()">Copy JSON</button>
+<!-- Add this button below the Copy JSON Button -->
+<button type="button" onclick="generatePpt()">Generate PPT</button>
+
+
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
