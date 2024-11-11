@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Lyrics</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        #stanzaDisplay {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+            box-sizing: border-box;
+        }
+
+        /* Centering font, bigger size */
+        #stanzaDisplay {
+            font-size: calc(16px + 2vw); /* Font size adjusts based on screen width */
+            text-align: center;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        .selected {
+            background-color: #ffcc00; /* Highlight selected stanza */
+        }
+    </style>
+</head>
+<body>
+    <div id="stanzaDisplay"></div>
+
+    <script>
+        // When the page loads, retrieve stanza and font color from the local storage
+        window.onload = function() {
+            const stanza = localStorage.getItem("currentStanza");
+            const stanzaIndex = localStorage.getItem("stanzaIndex");
+            const title = localStorage.getItem("songTitle");
+
+            const bgColor = localStorage.getItem("bgColor") || '#000000';
+            const fontColor = localStorage.getItem("fontColor") || '#ffffff';
+            const bgImage = localStorage.getItem("bgImage");
+
+            // Apply styles from localStorage
+            document.body.style.backgroundColor = bgColor;
+            document.body.style.color = fontColor;
+            if (bgImage) {
+                document.body.style.backgroundImage = `url(${bgImage})`;
+                document.body.style.backgroundSize = 'cover';
+            }
+
+            const stanzaDisplay = document.getElementById("stanzaDisplay");
+
+            if (stanza) {
+                stanzaDisplay.textContent = stanza;
+            } else {
+                stanzaDisplay.textContent = "No stanza selected!";
+            }
+
+            // Apply the selected font color and background settings to stanza
+            stanzaDisplay.style.fontSize = "calc(16px + 2vw)";  // Dynamic font size
+            stanzaDisplay.style.color = fontColor;
+        }
+    </script>
+</body>
+</html>

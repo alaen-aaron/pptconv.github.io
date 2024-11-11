@@ -129,4 +129,29 @@ function generatePpt() {
   // Redirect to the JSON to PPT Converter page
   window.location.href = 'ppt_conv/index.html'; // Ensure this points to your correct PPT converter page
 }
+function display() {
+  // Convert song data to JSON (this will also trigger the conversion and display in jsonOutput)
+
+  convertToJson();
+
+
+  // Retrieve the generated JSON from the jsonOutput area
+  const jsonOutput = document.getElementById('jsonOutput').textContent;
+
+
+  if (jsonOutput.trim() === "") {
+    alert("No JSON data available. Please convert the songs to JSON first.");
+    return;
+
+  }
+
+
+  // Store the generated JSON in localStorage
+  localStorage.setItem('pptJsonData', jsonOutput);
+
+
+  // Redirect to the JSON to PPT Converter page
+  window.location.href = 'display/index.html'; // Ensure this points to your correct PPT converter page
+
+}
 
